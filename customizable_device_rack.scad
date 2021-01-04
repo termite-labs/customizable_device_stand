@@ -8,10 +8,10 @@ height = 60;
 angle = 60;
 
 // Number of devices to hold
-num_devices = 2;
+num_devices = 3;
 
 // Size in mm of each device to hold. Must match num_devices. Allow ~1mmmm so it's not too tight.
-widths = [16, 16];
+widths = [16, 16, 28];
 
 // Thickness of the parts. I don't recommend changing this.
 thickness = 8;
@@ -29,7 +29,13 @@ function add(v, i = 0, r = 0) = i < len(v) ? add(v, i + 1, r + v[i]) : r;
 
 count = num_devices <  len(widths) ? num_devices : len(widths);
    
-distances = [for (idx = [ 0 : count - 1 ] ) add(sublist(widths, 0, idx)) + (thickness * (idx+1)) ];    
+distances = [for (idx = [ 0 : count - 1 ] ) add(sublist(widths, 0, idx)) + (thickness * (idx+1)) ];  
+  
+
+
+module oval(w,h, height, center = false) {
+ scale([1, h/w, 1]) cylinder(h=height, r=w, center=center);
+}
 
 
 /**
@@ -110,7 +116,8 @@ module sidebar() {
             for (idx = [ 0 : len(distances) - 1 ] ) {        
                 distance = distances[idx];
                 width = widths[idx];
-                translate([-length/2-1, distance - width/2, -thickness * sqrt(2)/2]) rotate([45, 0, 0]) cube([thickness +2, thickness, thickness]);
+                translate([-length/2-1, distance - width/2, -4]) rotate([0, 90, 0]) oval(thickness, 4.1, thickness + 2);
+                //cube([thickness +2, thickness, thickness]); 
             }
         }   
          
