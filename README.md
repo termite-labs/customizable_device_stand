@@ -1,8 +1,8 @@
 # A customizable 3d-printed (openscad) rack for multiple devices
 
-[](assets/multi_stand_cables.jpg)
-[](assets/multi_stand_empty.jpg)
-[](assets/multi_stand_loaded.jpg)
+![Stand with cables](assets/multi_stand_cables.jpg)
+![Stand empty](assets/multi_stand_empty.jpg)
+![Stand with cables and devices](assets/multi_stand_loaded.jpg)
 
 [Make yours in Configurator](https://www.thingiverse.com/apps/customizer/run?thing_id=4709463)
 
