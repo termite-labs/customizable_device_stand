@@ -8,7 +8,7 @@
 * Prints without supports
 
 
-[Thingiverse Configurator]()
+[Thingiverse Configurator](https://www.thingiverse.com/apps/customizer/run?thing_id=4709463)
 
 TODO:
 
